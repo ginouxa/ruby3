@@ -8,4 +8,10 @@ class UserTest < ActiveSupport::TestCase
     
   end
   
+  test "mail presence" do
+    @user.mail = " "
+    assert_not @user.valid?
+    
+  end
+  
 end
